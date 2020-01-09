@@ -1,0 +1,163 @@
+<body>
+
+
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Bad+Script&display=swap" rel="stylesheet">
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+
+            body {}
+
+            .frameContainer {
+                height: 95%;
+                width: 95%;
+
+            }
+
+            .container {
+                width: 100%;
+                height: 100%;
+                /* CSS Smooth Scroll */
+                overflow-y: scroll;
+                scroll-behavior: smooth;
+                scroll-snap-type: y mandatory;
+            }
+
+            section {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                width: 100%;
+                height: 100vh;
+
+                /* Scroll Snap */
+                scroll-snap-align: start;
+            }
+
+            section#form {
+                font-family: 'Bad Script', cursive;
+                background: url("bg.png") no-repeat center center/contain;
+                background-size: cover;
+                position:relative;
+                background-color: #F9F9F7;
+
+            }
+
+            section#landing {
+                background: url("bg.png") no-repeat center center/contain;
+                background-size: cover;
+                background-color: #F9F9F7;
+
+            }
+
+            li {
+                list-style-type: none;
+                display: flex;
+                justify-content: center;
+            }
+
+            label {
+                text-align: right;
+                font-size: xx-large;
+                width: 30vw;
+            }
+
+            input {
+                border: none;
+                font-family: 'Bad Script', cursive;
+                background: transparent;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                margin-left: 3vw;
+                font-size: xx-large;
+                width: 30vw;
+            }
+
+            input:focus {
+                outline: none;
+            }
+
+            button {
+                margin-top: 3vh;
+                padding: 2vw;
+                font-family: 'Bad Script', cursive;
+                font-size: xx-large;
+                background: transparent;
+                border: none
+            }
+
+            button:hover {
+                background-color: rgba(205, 153, 102, 0.2);
+                border-radius: 3vw;
+                padding: 2vw;
+
+            }
+
+            .bottomright {
+                position: absolute;
+                bottom: 6vh;
+                right: 6vw;
+                width: 10%;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <div class="container">
+            <section id="landing">
+                <img class="frameContainer" src="frame-text.svg" alt="">
+                <a href="#form"><img class="bottomright" src="down-arrow.png" alt=""></a>
+            </section>
+            <section id="form">
+                <div>
+                    <h1 style="margin-bottom: 3vw; font-size: xx-large;">Laat hier even je adres achter voor de
+                        officiële uitnodiging</h1>
+
+                    <form action="https://getform.io/f/6ff34744-b089-420a-8a59-4abdfb2d155e" method="POST">
+
+                        <ul class="flex-outer">
+                            <li>
+                                <label for="fname">Naam of Namen</label>
+                                <input id="fname" type="text" name="name"></br>
+                            </li>
+                            <li>
+                                <label for="femail">Email</label>
+                                <input id="femail" type="email" name="Email"></br>
+                            </li>
+                            <li>
+                                <label for="fstreet">Straat</label>
+                                <input id="fstreet" type="text" name="street"></br>
+                            </li>
+                            <li>
+                                <label for="fhouseNummer">Nummer</label>
+                                <input id="fhouseNummer" type="number" name="houseNummer"></br>
+                            </li>
+                            <li>
+                                <label for="fpostalCode">Postcode</label>
+                                <input id="fpostalCode" type="number" name="postalCode"></br>
+                            </li>
+                            <li>
+                                <label for="fcity">Gemeente</label>
+                                <input id="fcity" type="text" name="city"></br>
+                            </li>
+                            <li>
+                                <button type="submit">Verzenden</button>
+                            </li>
+                        </ul class="flex-outer">
+                    </form>
+                </div>
+            </section>
+
+
+        </div>
+
+
+
+
+    </body>
+</body>
